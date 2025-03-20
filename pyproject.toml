@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "d-blocks-core-plugin-hello"
+version = "0.1.0"
+description = ""
+authors = ["d-blocks-coder <d.blocks.coder@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "dblocks_core", from = "src" }, 
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+d-blocks-core = ">=0.9.3"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
