@@ -9,9 +9,14 @@ packages = [
     { include = "dblocks_plugin", from = "src" }, 
 ]
 
+# this is very important!
+exclude = [
+    "src/dblocks_plugin/__init__.py"
+]
+
 [tool.poetry.dependencies]
 python = ">=3.10"
-d-blocks-core = ">=0.9.3.7"
+d-blocks-core = "^0.9.3.7"
 
 
 
