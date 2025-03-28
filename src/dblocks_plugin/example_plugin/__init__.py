@@ -1,5 +1,7 @@
 from dblocks_core.model import plugin_model
 
+from dblocks_plugin.example_plugin.file_writer import HelloWriter
+
 
 class ExamplePlugin(plugin_model.PluginHello):
     """
@@ -15,4 +17,5 @@ class ExamplePlugin(plugin_model.PluginHello):
 
 PLUGINS = [
     ExamplePlugin(),
+    HelloWriter(),
 ]
