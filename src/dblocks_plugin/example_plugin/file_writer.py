@@ -1,7 +1,7 @@
 from pathlib import Path
 from textwrap import dedent
 
-from dblocks_core import logger
+from dblocks_core.config.config import logger
 from dblocks_core.model import meta_model, plugin_model
 
 
