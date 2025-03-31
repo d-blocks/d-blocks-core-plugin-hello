@@ -1,7 +1,7 @@
 from pathlib import Path
 from textwrap import dedent
 
-from dblocks_core.config.config import logger
+from dblocks_core import logger
 from dblocks_core.model import meta_model, plugin_model
 
 
@@ -28,6 +28,14 @@ class HelloWriter(plugin_model.PluginFSWriter):
             """
             )
         )
+        try:
+            content = path.read_text(encoding="utf-8", errors="strict")
+        except FileNotFoundError:
+            # the file does not exist, return None, which indicates we did not change the DDL
+            return None
+
+        content = _do_something_on_ddl(content)
+        return content
 
     def after(
         self,
@@ -45,3 +53,11 @@ class HelloWriter(plugin_model.PluginFSWriter):
             """
             )
         )
+
+
+def _do_something_on_ddl(content: str) -> str:
+    # do something with the content
+    header = "-- changed the ddl"
+    if header not in content:
+        content = header + "\n" + content
+    return content

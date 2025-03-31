@@ -16,7 +16,7 @@ exclude = [
 
 [tool.poetry.dependencies]
 python = ">=3.10"
-d-blocks-core = ">=0.9.3.12"
+d-blocks-core = ">=0.9.3.18"
 
 
 
