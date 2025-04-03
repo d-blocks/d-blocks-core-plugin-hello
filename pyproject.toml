@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "d-blocks-plugin-hello"
-version = "0.1.3"
+version = "0.1.4"
 description = ""
 authors = ["d-blocks-coder <d.blocks.coder@gmail.com>"]
 license = "MIT"
